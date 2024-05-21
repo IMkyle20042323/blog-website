@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       
+       .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .image-caption h5 {
+            margin-bottom: 5px;
+        }
+
+        .comments-container {
+            margin-top: 20px;
+        }
+
+        .comment-card {
+            margin-bottom: 10px;
+        }
+
+        .comment-card .reaction {
+            margin-top: 10px;
+        }
+
+        .comment-card {
+            animation: slideInUp 0.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .comment-card {
+            animation: slideIn 0.5s ease-in-out forwards
+        }
+
+        
+        #upload {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        #upload .form-group {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        #upload .form-group label,
+        #upload .form-group input[type="file"] {
+            width: 100%;
+        }
+
+        #upload .btn-primary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <h1>Welcome to Our Technology Page</h1>
+        </div>
+    </header>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main class="container my-4">
+        
+        <section id="videos" class="mb-5">
+            <h2 class="mb-3">Technology Videos</h2>
+            <div id="videoCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active">
+                        
+                        <div class="video-container">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xh4oUfTqlrk" allowfullscreen></iframe>
+                        </div>
+                       
+                        <div class="carousel-caption">
+                            <h5>Discover the Heartbeat of the Philippines</h5>
+                            <p>Dive into a World of Rich Culture, Vibrant Stories, and Inspiring Insights at PinoySphere.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+            <div class="comments-container">
+                <h4>Comments</h4>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">This video is amazing!</p>
+                        <div class="reaction">
+                            <button type="button" class="btn btn-primary">👍 430</button>
+                            <button type="button" class="btn btn-danger">👎 23</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <div class="comments-container">
+            <h4>Comments</h4>
+            
+            <div id="comments"></div>
+        </div>
+    </section>
+ 
+    <section id="add-comment" class="mb-5">
+        <h2 class="mb-3">Add Your Comment</h2>
+        <form id="comment-form">
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" id="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+       
+        <section id="images" class="mb-5">
+            <h2 class="mb-3">Technology Images</h2>
+            <div class="row">
+                
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="bu1.jpg">
+                        <div class="image-caption">
+                            <h5>Empowering Enterprises</h5>
+                            <p>Navigating the Business Terrain of the Philippines</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="bu2.jpg">
+                        <div class="image-caption">
+                            <h5>Beyond Borders</h5>
+                            <p>Technology is the driving force behind innovation, transforming our lives and shaping the future with endless possibilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="image-container">
+                        <img src="bu3.jpg">
+                        <div class="image-caption">
+                            <h5>From Startups to Success Stories</h5>
+                            <p>Exploring the Global Reach of Filipino Businesses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="upload" class="mb-5">
+            <h2 class="mb-3">Upload Your Images or Videos</h2>
+            <form>
+                <div class="form-group">
+                    <label for="uploadFile">Choose file to upload</label>
+                    <input type="file" class="form-control-file" id="uploadFile">
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 TravelSite</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+   
+            $('#comment-form').submit(function(event) {
+                event.preventDefault(); 
+             
+                var comment = $('#comment').val();
+                if (comment.trim() !== '') {
+                    
+                    $('#comments').prepend('<div class="card comment-card"><div class="card-body"><p class="card-text">' + comment + '</p><div class="reaction"><button type="button" class="btn btn-primary">👍 0</button><button type="button" class="btn btn-danger">👎 0</button></div></div></div>');
+                    
+                    $('#comment').val('');
+                }
+            });
+    
+            
+            $('.reaction button').click(function() {
+                $(this).toggleClass('active').siblings().removeClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

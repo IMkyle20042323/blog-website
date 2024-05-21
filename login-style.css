@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url('cover3.jpeg');
+    background-size: cover; 
+  
+    
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.login-form .form-group label {
+    flex: 0 0 100px; 
+    text-align: left;
+    margin-right: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    flex: 1; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form button[type="submit"] {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; 
+}
+
+.login-form .container {
+    text-align: left;
+}
+
+.login-form .psw {
+    text-align: left;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%; 
+    }
+
+    .login-form .form-group label {
+        flex: 0 0 auto;
+    }
+}
+
+
+

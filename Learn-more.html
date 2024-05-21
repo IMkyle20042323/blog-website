@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #333;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .about-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-header {
+            background: linear-gradient(to right, #c7c5c4, gray);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .about-header p {
+            font-size: 1.2em;
+        }
+
+        .about-content {
+            padding: 20px;
+        }
+
+        .bio h2, .photos h2, .contact-info h2, .testimonials h2 {
+            color: gray;
+        }
+
+        .photos img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #787474;
+            margin: 20px 0;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #121111;
+        }
+
+        blockquote {
+            background: #f4f4f4;
+            border-left: 10px solid #141414;
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-style: italic;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="about-container">
+        <div class="about-header">
+            <h1>About Us</h1>
+            <p>Discover more about who we are and the mission of our blog.</p>
+        </div>
+        <div class="about-content">
+            <div class="bio">
+                <h2>Welcome to PinoySphere!</h2>
+                <p>Hello! PinoySphere, a passionate blogger with a mission to foster a sense of community and celebrate the rich culture and diverse perspectives of the Philippines. I started this blog to share stories, insights, and experiences that reflect the vibrant spirit of the Filipino people. My goal is to connect, inspire, and empower individuals through meaningful content that resonates with our shared heritage and values.</p>
+                <p>At PinoySphere, we are dedicated to showcasing the beauty and complexity of Filipino culture by providing engaging articles, inspiring stories, and thought-provoking discussions. Our mission is to promote cultural appreciation, encourage dialogue, and foster a sense of pride in our identity for Filipinos around the world.</p>
+                <p>Our purpose is to bridge gaps and build connections within the Filipino community and beyond. We aim to celebrate our cultural heritage, explore contemporary issues, and amplify diverse voices. Our content is tailored for anyone who shares a passion for Filipino culture, whether you're a proud Filipino, a curious traveler, or simply someone who appreciates our traditions and values.</p>
+                <p>We offer a unique perspective on Filipino culture, blending traditional wisdom with modern insights. Through captivating narratives, insightful interviews, and engaging multimedia content, we strive to deepen understanding and cultivate a sense of belonging. By engaging with our content, we hope to spark conversations, inspire positive action, and foster a greater sense of unity and pride in our shared identity.</p>
+                <p>Together, let's celebrate the beauty of Filipino culture and create a vibrant community here at PinoySphere!</p>
+            </div>
+            <hr>
+            <div class="photos">
+                <h2>Photos</h2>
+                <img src="LOG1.jpg" alt="Photo 1" class="fade-in">
+            </div>
+            <hr>
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Email: <a href="mailto:PinoySphere@gmail.com">PinoySphere@gmail.com</a></p>
+                <p>Follow us on our social media:</p>
+                <p>
+                    <a href="https://www.facebook.com/yourprofile">Facebook</a> |
+                    <a href="https://twitter.com/yourprofile">Twitter</a> |
+                    <a href="https://www.instagram.com/yourprofile">Instagram</a>
+                </p>
+            </div>
+            <hr>
+            <div class="testimonials">
+                <h2>Testimonials</h2>
+                <blockquote class="slide-in">"PinoySphere has changed the way I think about Filipino cuisine. I can't thank you enough!" - Chara</blockquote>
+                <blockquote class="slide-in">"An incredible source of inspiration and knowledge." - Mia</blockquote>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+            const sliders = document.querySelectorAll('.slide-in');
+
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            sliders.forEach(slider => {
+                appearOnScroll.observe(slider);
+            });
+        });
+    </script>
+</body>
+</html>

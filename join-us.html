@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - CMK BLOG</title>
+    <link rel="stylesheet" href="join-us-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="main-content">
+        
+        <section id="join-us" class="section join-us-section">
+            <div class="container">
+                <div class="content">
+                    <h1>Explore, Publish Without Boundaries</h1>
+                    <p class="par">Dive into diverse topics, express your unique voice, and share compelling stories with the world. Join us and redefine what's possible in the digital realm.</p>
+                    <form action="#" method="POST" id="signupForm" class="signup-form">
+                        <input type="text" name="fullname" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                         <button type="submit" class="btn" href="#">Register</button>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                      </label>
+
+
+                     
+
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            window.location.href = "get.html"; 
+         
+        });
+    </script>
+</body>
+</html>
+

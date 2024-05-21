@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="get-in-touch-style.css">
+</head>
+<body>
+    <section class="contact-section">
+        <div class="contact-container">
+          <h2 class="contact-heading">Contact Us</h2>
+          <div class="contact-info">
+            <p>We'd love to hear from you! Reach out to us using the form below or contact us directly.</p>
+            <p>Email: PinoySphere@example.com</p>
+            <p>Phone: +1234567890</p>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm" action="#" method="POST" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    <script>
+        function submitForm(event) {
+           
+            event.preventDefault();
+
+           
+            window.location.href = "thankyou.html";
+        }
+    </script>
+</body>
+</html>

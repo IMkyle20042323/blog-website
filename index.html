@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Blog Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>  
+  <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="4.jpg" alt="Avatar Logo" class="rounded-pill">
+        <span class="ms-2 text-white">PinoySphere</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#latest">Latest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="tech.html">Technology</a></li>
+              <li><a class="dropdown-item" href="tra.html">Travel</a></li>
+              <li><a class="dropdown-item" href="foo.html">Sports</a></li>
+              <li><a class="dropdown-item" href="busi.html">Business</a></li>
+              <li><a class="dropdown-item" href="delicacy.html">Delicacy</a></li>
+              <li><a class="dropdown-item" href="life.html">Lifestyle</a></li>
+              <li><a class="dropdown-item" href="fest.html">Festivals</a></li>
+              <li><a class="dropdown-item" href="perso.html">Folk Dances[
+
+              </a></li>
+              <li><a class="dropdown-item" href="haw.html">National Symbols</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="jumbotron text-center">
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="vids.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="text-overlay">
+        <h1 class="main-heading">Welcome to PinoySphere</h1>
+        <h2 class="sub-heading">Explore, Discover & Grow!</h2>
+        <div class="login-bar">
+          <button class="btn btn-custom" onclick="location.href='join-us.html'">Register</button>
+          <button class="btn btn-custom" onclick="location.href='login.html'">Log in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="latest" class="section latest-section">
+    <div class="container">
+      <div class="content text-center">
+        <h1>Latest Blog Post</h1>
+        <p>Embark on a journey through the heart of the Philippines with PinoySphere.</p>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img class="card-img-top" src="luzon.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Luzon</h5>
+              <p class="card-text">The summer capital of the Philippines, famous for its cool climate, scenic views, and cultural heritage.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img class="card-img-top" src="boracay.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Visayas</h5>
+              <p class="card-text"> Renowned for its pristine white sand beaches, crystal-clear waters, and vibrant nightlife, Boracay is a top destination for beach lovers.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card custom-card">
+            <img class="card-img-top" src="mindanao.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Mindanao</h5>
+              <p class="card-text"> Famous for its world-class surfing spots like Cloud 9, pristine beaches, and idyllic island vibe.</p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about-section">  
+    <div class="container">
+      <div class="content text-center">
+        <h1>About Us</h1>
+        <p>Welcome to PinoySphere, your ultimate destination for exploring the heart and soul of Filipino culture! At PinoySphere, we're on a mission to celebrate the richness and diversity of the Philippines, from its vibrant traditions to its contemporary innovations. Dive into a world of captivating stories, insightful articles, and inspiring insights that showcase the essence of Filipino identity.</p>
+        <div class="about-info">
+          <div class="info-text">
+            <h2>Our Mission</h2>
+            <p>At PinoySphere, we are committed to promoting and preserving Filipino culture by providing a platform for sharing stories, experiences, and knowledge. Through our engaging content and community-driven approach, we aim to inspire, educate, and connect people from all walks of life.</p>
+          </div>
+          <div class="info-image">
+            <img src="kylyly.jpeg" alt="Mission Image">
+          </div>
+        </div>
+        <button class="btn custom-btn"><a href="learn-more.html" style="color: inherit; text-decoration: none;">Learn More</a></button>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="content text-center">
+        <h1>Contact Us</h1>
+        <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you! Feel free to reach out to us using the contact form below, and our team will get back to you as soon as possible. Your feedback is valuable to us as we strive to provide you with the best experience on PinoySphere. Let's connect and make PinoySphere even better together!</p>
+        <button class="btn custom-btn"><a href="get-in-touch.html" style="color: inherit; text-decoration: none;">Get in Touch</a></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="social-icons text-center mb-3">
+                    <a href="https://www.facebook.com/callm.ktamz?mibextid=ZbWKwL" class="btn btn-outline-light btn-lg"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="https://www.instagram.com/" class="btn btn-outline-light btn-lg"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://twitter.com/" class="btn btn-outline-light btn-lg"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fpin.it%2FHUJUhP6Kb%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR2XAn8WxKftfggqd2exyFRbgEaBiezTyq2qZSfCbzBg2lfXS9G8xxTIoWE_aem_Ab2rH6ATCr_FEccKMGVJlnuNgP7N5JSK-cFJzR5pDgwSWdW6Khm9evsbkBtBWXD8LOVSHDEb8nXiMMBKcrEzwyGQ&h=AT3AzEtS6uCmANyxsgnYc5c7c8YFI4yw7ZARr37n3x0exm4UNfnwoPWn1In7PwYnWD2m6mu3uG3IoLj9BEb7cu3EC8za1SQ_q8z9GZaXhEJa9qfT0ZN6O852i-itvYmO99dVzg" class="btn btn-outline-light btn-lg"><i class="fab fa-pinterest fa-2x"></i></a>
+                </div>
+                <p class="mb-0">Follow us on social media</p>
+            </div>
+
+            <div class="col-md-6">
+                
+                <div class="custom-content text-center">
+                    <p class="mb-2">Additional Links:</p>
+                    <ul class="list-unstyled mb-3">
+                        <li><a href="privacy-policy.html" class="text-white">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-0">&copy; 2024 PinoySphere. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
